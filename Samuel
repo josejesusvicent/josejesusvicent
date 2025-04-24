@@ -1,12 +1,41 @@
-- 👋 Hi, I’m @josejesusvicent
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Estudiantes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Estudiantes</h1>
+        <form id="studentForm">
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="text" id="apellido" placeholder="Apellido" required>
+            <input type="text" id="cedula" placeholder="Cédula" required>
+            
+            <div class="date-container">
+                <div class="date-field">
+                    <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" id="fechaNacimiento" required>
+                </div>
+                <div class="date-field">
+                    <label for="fechaRegistro">Fecha de Registro:</label>
+                    <input type="date" id="fechaRegistro" required>
+                </div>
+            </div>
 
-<!---
-josejesusvicent/josejesusvicent is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+            <button type="submit">Agregar Estudiante</button>
+        </form>
+
+        <h2>Buscar Estudiante por Cédula</h2>
+        <input type="text" id="searchCedula" placeholder="Ingrese la cédula a buscar">
+        <button id="searchButton">Buscar</button>
+
+        <h2>Lista de Estudiantes</h2>
+        <ul id="studentList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
